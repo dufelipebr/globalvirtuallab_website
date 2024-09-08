@@ -1,4 +1,7 @@
 {
+  "Menu_About": "Acerca de",
+  "Menu_Business": "Negocios",
+  "Menu_Contact": "Entre en contacto",
   "About": "Acerca de",
   "Support": "Soporte",
   "Other": "Otros",
@@ -15,5 +18,21 @@
   "Versatile": "Versátil",
   "A_rich_incredibly_adoptable_template_that_scales_between_a_small_showcase_website_and_a_full_size_app": "Una plantilla increíblemente rica y adaptable que escala entre un pequeño sitio web de exhibición y una aplicación de tamaño completo.",
   "This_is_a_simple_about_page_just_to_show_how_you_can_use_the_internationalization_in_different_pages": "Esta es una página simple sobre cómo mostrar cómo puedes usar la internacionalización en diferentes páginas",
-  "Performant": "Rendimiento"
+  "Performant": "Rendimiento",
+  "About_Content": "Somos una empresa fundada en el año 2024 por un grupo de emprendedores para satisfacer la demanda del mercado de seguros y otros negocios. La idea es entender su negocio para brindar las mejores herramientas para el crecimiento de su empresa, entendiendo las necesidades de su empresa y contribuyendo al crecimiento.",
+  "About_Content_2": "Contamos con un equipo multidisciplinario construido sobre la base de TAL - Tecnología (Tech), Finanzas (Contabilidad), Jurídico (Legal), tiene una larga experiencia en el sector financiero y de seguros, actuando como varios socios comerciales y sirviendo a muchas empresas, acumulando la experiencia necesaria. experiencia para crear la herramienta ideal para la toma de decisiones.",
+  "Business_Header": "Business_Header",
+  "Business_h1_1": "Business_h1_1",
+  "Business_h1_1_Content" : "Business_h1_1_Content",
+  "Business_h1_2": "Business_h1_2",
+  "Business_h1_2_Content": "Business_h1_2_Content",
+  "Business_h1_3": "Business_h1_3",
+  "Business_h1_3_Content": "Business_h1_3_Content",
+  "Contact_Header": "Business_Header",
+  "Contact_h1_1": "Business_h1_1",
+  "Contact_h1_1_Content" : "Business_h1_1_Content",
+  "Contact_h1_2": "Business_h1_2",
+  "Contact_h1_2_Content": "Business_h1_2_Content",
+  "Contact_h1_3": "Business_h1_3",
+  "Contact_h1_3_Content": "Business_h1_3_Content"
 }

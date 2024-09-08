@@ -15,19 +15,18 @@ export const Header: FC<Props> = ({ locale }) => {
     <div className='mx-auto flex max-w-screen-2xl flex-row items-center justify-between p-5'>
       <Link lang={locale} href='/'>
         <div className='flex flex-row items-center'>
-          <div className='mb-2 h-14 w-14'>
+          <div className='mb-2 h-28 w-28'>
             <LogoIcon />
           </div>
-          <strong className='mx-2 select-none'>Template</strong>
         </div>
       </Link>
       <div className='flex flex-row items-center gap-3'>
         <nav className='mr-10 inline-flex gap-5'>
-          <Link lang={locale} href={`/about`}>
-            {t('About')}
-          </Link>
-          <a href=''>{t('Support')}</a>
-          <a href=''>{t('Other')}</a>
+          <Link lang={locale} href={`/about`}>{t('Menu_About')}</Link>
+          <Link lang={locale} href={`/business`}>{t('Menu_Business')}</Link>
+          {/* <Link lang={locale} href={`/customers`}>{t('Menu_Customers')}</Link> */}
+          <Link lang={locale} href={`/social`}>{t('Menu_Social')}</Link>
+          <Link lang={locale} href={`/contact`}>{t('Menu_Contact')}</Link>
         </nav>
         <ThemeSwitch />
         <LangSwitcher />
@@ -36,7 +35,7 @@ export const Header: FC<Props> = ({ locale }) => {
           target='_blank'
         >
           <div className='size-8'>
-            <GithubIcon />
+            
           </div>
         </a>
       </div>
