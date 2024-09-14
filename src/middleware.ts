@@ -10,13 +10,15 @@ const customMiddleware: CustomMiddleware = async req => {
 
 const intlMiddleware = createMiddleware({
   locales,
-  defaultLocale: 'en',
+  defaultLocale: 'pt',
   localePrefix
 })
 
 export default async function middleware(
   req: NextRequest
 ): Promise<ReturnType<typeof intlMiddleware>> {
+console.log('chegou');
+
   await customMiddleware(req)
   return intlMiddleware(req)
 }

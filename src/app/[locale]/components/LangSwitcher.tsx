@@ -5,6 +5,7 @@ import { usePathname, useSelectedLayoutSegments } from 'next/navigation'
 import React, { useState } from 'react'
 import { FiGlobe } from 'react-icons/fi'
 import Button from './Button'
+import Image from 'next/image'
 
 const LangSwitcher: React.FC = () => {
   interface Option {
@@ -23,8 +24,19 @@ const LangSwitcher: React.FC = () => {
 
   return (
     <div className='flex items-center justify-center'>
-      <div className='relative'>
-        <Button
+      <div className='flex' >
+        <Link href={`/${"pt"}/${urlSegments.join('/')}`} > 
+          <Image src="/Bra.png"   width={25} height={25} />
+        </Link>
+        <Link href={`/${"en"}/${urlSegments.join('/')}`} > 
+          <Image src="/Eua.png"   width={25} height={25} />
+        </Link>
+        <Link href={`/${"es"}/${urlSegments.join('/')}`} > 
+          <Image src="/espanhol.png"   width={25} height={25} />
+        </Link>
+         
+
+        {/* <Button
           className='text-destructive inline-flex w-full items-center justify-between gap-3'
           size='small'
           onClick={() => setIsOptionsExpanded(!isOptionsExpanded)}
@@ -41,6 +53,14 @@ const LangSwitcher: React.FC = () => {
               aria-orientation='vertical'
               aria-labelledby='options-menu'
             >
+              <Image 
+                src="/Bra.png" 
+                key="pt" 
+                Link={`/${"pt"}/${urlSegments.join('/')}`} 
+                width={25}
+                height={25}
+              />
+
               {options.map(lang => {
                 return (
                   <Link
@@ -62,10 +82,10 @@ const LangSwitcher: React.FC = () => {
                     </button>
                   </Link>
                 )
-              })}
+              })} 
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </div>
   )

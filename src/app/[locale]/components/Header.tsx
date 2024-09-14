@@ -28,7 +28,7 @@ export const Header: FC<Props> = ({ locale }) => {
           <Link lang={locale} href={`/social`}>{t('Menu_Social')}</Link>
           <Link lang={locale} href={`/contact`}>{t('Menu_Contact')}</Link>
         </nav>
-        <ThemeSwitch />
+
         <LangSwitcher />
         <a
           href='https://github.com/yahyaparvar/nextjs-template'
