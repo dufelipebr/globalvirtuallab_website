@@ -22,22 +22,12 @@ export const Header: FC<Props> = ({ locale }) => {
       </Link>
       <div className='flex flex-row items-center gap-3'>
         <nav className='mr-10 inline-flex gap-5'>
-          <Link lang={locale} href={`/about`}>{t('Menu_About')}</Link>
-          <Link lang={locale} href={`/business`}>{t('Menu_Business')}</Link>
-          {/* <Link lang={locale} href={`/customers`}>{t('Menu_Customers')}</Link> */}
-          <Link lang={locale} href={`/social`}>{t('Menu_Social')}</Link>
-          <Link lang={locale} href={`/contact`}>{t('Menu_Contact')}</Link>
-        </nav>
-
+          <Link lang={locale} href={'/about'}>{t('Menu_About')}</Link>
+          <Link lang={locale} href={'/business'}>{t('Menu_Business')}</Link>
+          <Link lang={locale} href={'/social'}>{t('Menu_Social')}</Link>
+          <Link lang={locale} href={'/contact'}>{t('Menu_Contact')}</Link>
+        </nav> 
         <LangSwitcher />
-        <a
-          href='https://github.com/yahyaparvar/nextjs-template'
-          target='_blank'
-        >
-          <div className='size-8'>
-            
-          </div>
-        </a>
       </div>
     </div>
   )

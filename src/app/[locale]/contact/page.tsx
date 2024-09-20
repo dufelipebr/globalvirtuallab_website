@@ -23,12 +23,12 @@ export default function About() {
     descricao:'',
   });
 
-  const handleChange = (param) => 
+  const handleChange = () => 
   {
-    console.log(param);
+    
   };
 
-  const handleClick = async (param) => 
+  const handleClick = async () => 
   {
     console.log('handleClick');
     const { data, error } = await resend.emails.send({
@@ -51,15 +51,7 @@ export default function About() {
       console.log(data);
     }
   
-    //res.status(200).json(data);
-
-
   };
-
-
-  
-
-
 
   const t = useTranslations('')
   return (
@@ -72,17 +64,15 @@ export default function About() {
           <div>
               <p className="py-1 text-lg leading-8 text-gray-600 font-bold ">{t('Dictionary_Name')}:</p>
               <p>
-              <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  autoComplete="name"
-                  required
-                  onChange={handleChange}
-                  className={"block w-full text-blue-800 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-2 bg-slate-300"}
-                />
-
-
+                <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    autoComplete="name"
+                    required
+                    onChange={handleChange}
+                    className={"block w-full text-blue-800 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-2 bg-slate-300"}
+                  />
               </p>
           </div>
           <div>
@@ -93,9 +83,8 @@ export default function About() {
                   name="email"
                   id="email"
                   required
-                  maxLength="50"
+                  maxLength={50}
                   autoComplete="email"
-                  rightIcon={HiMail} 
                   className={"block w-full text-blue-800 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-2 bg-slate-300"}
                 />
               </p>
@@ -108,9 +97,8 @@ export default function About() {
                   name="telefone"
                   id="telefone"
                   required
-                  maxLength="50"
+                  maxLength={50}
                   autoComplete="telefone"
-                  rightIcon={HiPhone} 
                   className={"block w-full text-blue-800 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-2 bg-slate-300"}
                 />
               </p>
@@ -118,7 +106,7 @@ export default function About() {
           <div>
               <p className="py-1 text-lg leading-8 text-gray-600 font-bold ">{t('Dictionary_ContactType')}:</p>
               <p>
-               <select  className={"block  w-full text-blue-800 rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-2 bg-slate-300"}>
+               <select name="access_type" className={"block  w-full text-blue-800 rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-2 bg-slate-300"}>
                   <option>{t('Dictionary_Phone')}</option>
                   <option>{t('Dictionary_Email')}</option>
                   <option>{t('Dictionary_Zap')}</option>
@@ -128,7 +116,7 @@ export default function About() {
           <div>
               <p className="py-1 text-lg leading-8 text-gray-600 font-bold ">{t('Dictionary_Subject')}:</p>
               <p>
-                  <select  className={"block  w-full text-blue-800 rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-2 bg-slate-300"}>
+                  <select name="subject_type" className={"block  w-full text-blue-800 rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-2 bg-slate-300"}>
                     <option>{t('Dictionary_ProjectHiring')}</option>                    
                     <option>{t('Dictionary_Products')}</option>                    
                     <option>{t('Dictionary_Support')}</option>
@@ -165,19 +153,19 @@ export default function About() {
           <div className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" >{t('Contact_Our_data')}</div>
           <div className="mt-10 text-base font-semibold leading-7 text-indigo-600">{t('Contact_Office_1')}</div>
           <div className="py-1 text-lg leading-8 text-gray-600 font-bold ">{t('Contact_Bussiness_Name')}</div>
-          <div className="py-1 text-lg leading-8 text-gray-600 ">Global Virtual Lab Soluções Digitais - S.A </div>
+          <div className="py-1 text-lg leading-8 text-gray-600 ">{t('Company_Name')}  </div>
           <div className="py-1 text-lg leading-8 text-gray-600 font-bold ">{t('Contact_Billing_Address')}</div>
-          <div className="py-1 text-lg leading-8 text-gray-600 ">Rua George Smith, 357 - a185, São Paulo - SP - Brasil, 05074-010.</div>
+          <div className="py-1 text-lg leading-8 text-gray-600 ">{t('Company_Adress_Comercial')} </div>
           <div className="text-lg leading-8 text-gray-600 font-bold ">{t('Contact_Billing_Comercial')}</div>
-          <div className="py-1 text-lg leading-8 text-gray-600 ">Rua George Smith, 357 - a185, São Paulo - SP - Brasil, 05074-010.</div>
-          {/* <div className="text-lg leading-8 text-gray-600 font-bold ">{t('Contact_Billing_Phone')}</div>
-          <div className="py-1 text-lg leading-8 text-gray-600 ">(11)94711.9414</div> */}
+          <div className="py-1 text-lg leading-8 text-gray-600 ">{t('Company_Adress_Billing')}</div>
           <div className="text-lg leading-8 text-gray-600 font-bold ">{t('Contact_Company_Number')}</div>
-          <div className="py-1 text-lg leading-8 text-gray-600 "> [no references]</div>
+          <div className="py-1 text-lg leading-8 text-gray-600 "> {t('Company_Legal_Code')}</div>
           <div className="text-lg leading-8 text-gray-600 font-bold ">{t('Contact_State_Number')}</div>
-          <div className="py-1 text-lg leading-8 text-gray-600 "> [no references]</div>
+          <div className="py-1 text-lg leading-8 text-gray-600 "> {t('Company_Legal_State_Code')}</div>
           <div className="text-lg leading-8 text-gray-600 font-bold ">{t('Contact_City_Number')}</div>
-          <div className="py-1 text-lg leading-8 text-gray-600 ">[no references]</div>
+          <div className="py-1 text-lg leading-8 text-gray-600 ">{t('Company_Legal_City_Code')}</div>
+          <div className="text-lg leading-8 text-gray-600 font-bold ">{t('Dictionary_Phone')}</div>
+          <div className="py-1 text-lg leading-8 text-gray-600 ">{t('Company_Phone')}</div>
         </div>
       </div>
     </div>

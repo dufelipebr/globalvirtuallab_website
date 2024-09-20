@@ -26,13 +26,13 @@ const LangSwitcher: React.FC = () => {
     <div className='flex items-center justify-center'>
       <div className='flex' >
         <Link href={`/${"pt"}/${urlSegments.join('/')}`} > 
-          <Image src="/Bra.png"   width={25} height={25} />
+          <Image alt={"Português"} src="/Bra.png"   width={25} height={25} />
         </Link>
         <Link href={`/${"en"}/${urlSegments.join('/')}`} > 
-          <Image src="/Eua.png"   width={25} height={25} />
+          <Image alt={"English"} src="/eua.png"   width={25} height={25} />
         </Link>
         <Link href={`/${"es"}/${urlSegments.join('/')}`} > 
-          <Image src="/espanhol.png"   width={25} height={25} />
+          <Image alt={"Espanõl"} src="/espanhol.png"   width={25} height={25} />
         </Link>
          
 

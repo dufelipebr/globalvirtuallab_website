@@ -85,5 +85,12 @@
   "Contact_Billing_Phone": "Teléfono", 
   "Contact_Company_Number": "CNPJ",
   "Contact_State_Number": "número legal del estado", 
-  "Contact_City_Number": "número legal del municipio"
+  "Contact_City_Number": "número legal del municipio",
+  "Company_Legal_Code": "000.000/0000-00",
+  "Company_Legal_State_Code": "isento",
+  "Company_Legal_City_Code": "isento",
+  "Company_Adress_Billing": "Rua George Smith, 357 - a185, São Paulo - SP - Brasil, 05074-010",
+  "Company_Adress_Comercial": "Rua George Smith, 357 - a185, São Paulo - SP - Brasil, 05074-010",
+  "Company_Name": "Global Virtual Lab Soluções Digitais - S.A",
+  "Company_Phone": "+5511947119414"
 }

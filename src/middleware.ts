@@ -17,7 +17,7 @@ const intlMiddleware = createMiddleware({
 export default async function middleware(
   req: NextRequest
 ): Promise<ReturnType<typeof intlMiddleware>> {
-console.log('chegou');
+  //console.log('chegou');
 
   await customMiddleware(req)
   return intlMiddleware(req)
